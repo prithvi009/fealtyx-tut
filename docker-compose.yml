@@ -13,7 +13,7 @@ services:
       context: .             
     container_name: fealtyx
     ports:
-      - "8080:8080"              
+      - "8000:8000"              
     depends_on:
       - ollama                
     environment:
