@@ -22,6 +22,7 @@ func LlamaAPI(prompt string) (string, error) {
 
 	resp, err := http.Post("http://localhost:11434/api/generate", "application/json", bytes.NewBuffer(jsonData))
 	if err != nil {
+		log.Printf("error to access llama: %v", err)
 		return "", err
 	}
 	defer resp.Body.Close()
